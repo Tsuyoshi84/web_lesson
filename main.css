@@ -35,10 +35,47 @@ img {
 
 .sub-section {
   height: 100vh;
+  display: flex;
+}
+
+.sub-section h2 {
+  font-size: 40px;
+}
+
+.sub-section p {
+  font-size: 40px;
+}
+
+.sub-section.white-bg h2 {
+  color: black;
+}
+
+.sub-section.black-bg h2 {
+  color: white;
+}
+
+.sub-section.white-bg p {
+  color: black;
+}
+
+.sub-section.black-bg p {
+  color: white;
 }
 
 .introduction {
   background-image: url('./images/background_2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.our-will {
+  background-image: url('./images/background_3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.our-ramen {
+  background-image: url('./images/background_4.jpg');
   background-size: cover;
   background-position: center;
 }
