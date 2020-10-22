@@ -5,12 +5,15 @@ body {
 
 h1 {
   color: white;
-  font-size: 70px;
+  font-size: 80px;
   font-family: 'Anton', sans-serif;
+  text-align: center;
 }
 
-h2 {
-  color: aqua;
+.credit {
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 img {
@@ -36,6 +39,12 @@ img {
 .sub-section {
   height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-content {
+  width: 580px;
 }
 
 .sub-section h2 {
@@ -43,7 +52,7 @@ img {
 }
 
 .sub-section p {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .sub-section.white-bg h2 {
