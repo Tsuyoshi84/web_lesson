@@ -3,35 +3,54 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-h1 {
-  color: white;
-  font-size: 80px;
-  font-family: 'Anton', sans-serif;
+.main-title {
   text-align: center;
+  font-size: 100px;
+  font-family: 'Anton', sans-serif;
+  animation: main-title-animation 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
-.credit {
-  color: white;
-  font-size: 20px;
-  text-align: center;
+.sub-title {
+  animation: main-title-animation 1s forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes main-title-animation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 50px;
 }
 
 img {
-  width: 100px;
-  height: 100px;
-}
-
-.ramen-menu {
-  color: wheat;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
 }
 
 .main-section {
   height: 100vh;
-  background-color: black;
+  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: black;
+  font-size: 30px;
   background-image: url('./images/background_1.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -39,52 +58,67 @@ img {
 .sub-section {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.inner-content {
-  width: 580px;
+.sub-section .content {
+  max-width: 620px;
+  font-size: 20px;
 }
 
-.sub-section h2 {
-  font-size: 40px;
-}
-
-.sub-section p {
-  font-size: 30px;
-}
-
-.sub-section.white-bg h2 {
+.sub-section.white {
   color: black;
+  background-color: white;
 }
 
-.sub-section.black-bg h2 {
+.sub-section.black {
   color: white;
+  background-color: black;
 }
 
-.sub-section.white-bg p {
-  color: black;
-}
-
-.sub-section.black-bg p {
-  color: white;
-}
-
-.introduction {
+.sub-section.about-me {
   background-image: url('./images/background_2.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.our-will {
+.sub-section.our-will {
   background-image: url('./images/background_3.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.our-ramen {
+.sub-section.our-ramen {
   background-image: url('./images/background_4.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.ramens {
+  display: flex;
+  grid-gap: 20px;
+}
+
+.ramens .ramen {
+  text-align: center;
+}
+
+.ramens .ramen .name {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.order-button {
+  font-size: 18px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
 }
